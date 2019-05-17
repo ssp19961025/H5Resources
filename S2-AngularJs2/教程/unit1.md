@@ -1,4 +1,53 @@
 &copy;詹亮                     - site : https://github.com/lzhanforgit/H5Resources
+##### 预备知识
+1. class
+
+    ```
+        class User{
+        constructor(id,name,pass){
+            this.id=id;
+            this.name=name;
+            this.password=pass;
+        }
+        show(){
+            console.log(this.name);
+        }
+    }
+    
+    
+    
+    class Admin extends User{
+        constructor(id,name,pass,type){
+            super(id,name,pass);
+            this.type=type;
+        }
+    }
+    
+    var ad=new Admin('001','TOM','888','boss');
+    
+    ad.show();
+    
+    console.log(ad.id);
+    ```
+
+2. import export
+
+    ```
+        //export
+        export var num=12;
+        export var add=function (a,b) {
+            return a+b;
+        }
+        //import
+        import {num} from './4-export';
+        import {add} from './4-export';
+        
+        var res=add(10,20);
+        
+        console.log(res);
+    ```
+
+====
 1. 简介
 
     >AngularJS2 是 Angular 1.x 的升级版本，性能上得到显著的提高，能很好的支持 Web 开发组件。
@@ -103,8 +152,19 @@
 
     //运行项目
 
-    npm serve
+    npm start 或者
 
     ng serve
     ```
+6. 利用cli 生成组件
+
+    ```
+    *     ng generate component my-comp - 生成一个新组件，同时生成其测试规格和相应的HTML/CSS文件
+    *     ng generate directive my-directive - 生成一个新指令
+    *     ng generate pipe my-pipe - 生成一个新管道
+    *     ng generate service my-service - 生成一个新服务
+    *     ng generate route my-route - 生成一个新路由
+    *     ng generate class my-class - 生成一个简易的模型类
+    ```
+
 
